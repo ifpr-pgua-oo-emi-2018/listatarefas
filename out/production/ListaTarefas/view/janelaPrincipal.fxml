@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Text?>
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="controler.janelaPrincipal"
+      prefHeight="400.0" prefWidth="600.0">
+
+    <Label text="_Título" labelFor="$tfTitulo" mnemonicParsing="true"/>
+    <TextField fx:id="tfTitulo" prefColumnCount="30"/>
+
+    <Label text="_Descrição" labelFor="$tfDescricao" mnemonicParsing="true"/>
+    <TextField fx:id="tfDescricao" prefColumnCount="30"/>
+
+
+    <Button fx:id="btSalvar" text="Salvar" onAction="#acaoSalvar"/>
+    <!--
+    <Text fx:id="txtLista" text="Tarefas"/>
+    -->
+
+    <ListView fx:id="ltTarefas" onMouseClicked="#mostraDetalhe"/>
+
+    <Text fx:id="txtDetalheTarefa"/>
+
+
+</VBox>
