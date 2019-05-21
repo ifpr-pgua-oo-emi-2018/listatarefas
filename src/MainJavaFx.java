@@ -7,6 +7,8 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import model.Agenda;
+import model.Tarefa;
 
 public class MainJavaFx extends Application {
 

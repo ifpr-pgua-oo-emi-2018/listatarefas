@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Text?>
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="control.JanelaPrincipal"
+      prefHeight="400.0" prefWidth="600.0"
+      spacing="10"
+>
+
+    <HBox spacing="3">
+        <Label text="Título" labelFor="$tfTitulo"/>
+        <TextField fx:id="tfTitulo"/>
+    </HBox>
+
+    <HBox spacing="3">
+        <Label text="Descrição" labelFor="$tfDescricao"/>
+        <TextField fx:id="tfDescricao"/>
+    </HBox>
+
+    <Button text="Salvar" onAction="#acaoSalvar" />
+
+    <Text text="Tarefas" fx:id="txtListaTarefas"/>
+
+
+
+</VBox>

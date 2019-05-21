@@ -1,3 +1,6 @@
+import model.Agenda;
+import model.Tarefa;
+
 import java.util.Scanner;
 
 public class Main {

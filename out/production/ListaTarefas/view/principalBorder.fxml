@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Text?>
+<?import javafx.collections.FXCollections?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="control.JanelaPrincipal"
+            prefHeight="400.0" prefWidth="600.0">
+
+    <top>
+        <HBox alignment="TOP_CENTER" style="-fx-background-color: red">
+            <Text text="Top" />
+        </HBox>
+    </top>
+    <center>
+        <VBox  style="-fx-background-color: green">
+            <TextArea fx:id="taResultado" prefRowCount="10"/>
+
+            <CheckBox fx:id="chkOp1" text="Opção 1"/>
+            <CheckBox fx:id="chkOp2" text="Opção 2"/>
+            <CheckBox fx:id="chkOp3" text="Opção 3"/>
+
+            <Text text="Aluno?"/>
+
+            <fx:define>
+                <ToggleGroup fx:id="alunoGroup"/>
+            </fx:define>
+
+            <RadioButton fx:id="rdOp1" text="Sim"
+                         toggleGroup="$alunoGroup"/>
+            <RadioButton fx:id="rdOp2" text="Não"
+                         toggleGroup="$alunoGroup"/>
+
+            <ComboBox fx:id="cbOpcoes">
+                <items>
+                    <FXCollections
+                            fx:factory="observableArrayList">
+                        <String fx:value="This is Option 1"/>
+                        <String fx:value="This is Option 2"/>
+                        <String fx:value="This is Option 3"/>
+                        <String fx:value="This is Option 4"/>
+                        <String fx:value="This is Option 5"/>
+                    </FXCollections>
+                </items>
+                <value>
+                    <String fx:value="This is Option 4"/>
+                </value>
+            </ComboBox>
+
+
+
+
+            <Button text="Ok" onAction="#mostra"/>
+
+
+        </VBox>
+
+    </center>
+    <right>
+        <HBox style="-fx-background-color: yellow">
+            <Text text="Right"/>
+        </HBox>
+    </right>
+    <left>
+        <HBox style="-fx-background-color: blue">
+            <Text text="Left" />
+        </HBox>
+    </left>
+    <!--
+    <bottom>
+        <HBox style="-fx-background-color: purple">
+            <Text text="Bottom" />
+        </HBox>
+
+    </bottom>
+   -->
+</BorderPane>
