@@ -1,33 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
 
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Text?>
-<VBox xmlns="http://javafx.com/javafx"
-      xmlns:fx="http://javafx.com/fxml"
-      fx:controller="control.JanelaPrincipal"
-      prefHeight="400.0" prefWidth="600.0"
-      spacing="10"
->
+<BorderPane prefHeight="400.0"
+            prefWidth="600.0"
+            xmlns="http://javafx.com/javafx/8.0.161-ea"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="control.JanelaPrincipal">
 
-    <HBox spacing="3">
-        <Label text="Título" labelFor="$tfTitulo"/>
-        <TextField fx:id="tfTitulo"/>
-    </HBox>
+    <padding>
+        <Insets bottom="15" left="15" right="15" top="15" />
+    </padding>
 
-    <HBox spacing="3">
-        <Label text="Descrição" labelFor="$tfDescricao"/>
-        <TextField fx:id="tfDescricao"/>
-    </HBox>
+    <top>
+        <GridPane hgap="5.0" vgap="5.0">
+            <Label text="Título" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+            <TextField fx:id="tfTitulo" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+            <Label text="Descrição" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+            <TextArea fx:id="tfDescricao" prefRowCount="3" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Button onAction="#acaoSalvar" text="Salvar" BorderPane.alignment="BOTTOM_RIGHT" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+        </GridPane>
+    </top>
+    <left>
+        <ListView fx:id="ltvTarefas" onMouseClicked="#acaoClickLista">
+         <BorderPane.margin>
+            <Insets right="5.0" top="5.0" />
+         </BorderPane.margin>
+        </ListView>
+    </left>
+    <center>
+        <TextArea fx:id="taVerDescricao">
+         <BorderPane.margin>
+            <Insets top="5.0" />
+         </BorderPane.margin>
+        </TextArea>
+    </center>
+    <bottom>
+        <HBox>
+            <BorderPane.margin>
+                <Insets top="5.0" />
+            </BorderPane.margin>
+            <Text fx:id="txtQtdeTarefas" text="Número de Tarefas:"/>
+        </HBox>
+    </bottom>
 
-    <Button text="Salvar" onAction="#acaoSalvar" />
-
-    <Text text="Tarefas" fx:id="txtListaTarefas"/>
-
-
-
-</VBox>
+</BorderPane>

@@ -56,7 +56,7 @@
 
 
 
-            <Button text="Ok" onAction="#mostra"/>
+            <Button text="Ok" />
 
 
         </VBox>

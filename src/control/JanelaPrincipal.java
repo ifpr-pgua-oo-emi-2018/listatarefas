@@ -1,10 +1,7 @@
 package control;
 
 import javafx.fxml.FXML;
-import javafx.scene.control.CheckBox;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.text.Text;
 import model.Agenda;
 import model.Tarefa;
@@ -17,28 +14,17 @@ public class JanelaPrincipal {
     private TextField tfTitulo;
 
     @FXML
-    private TextField tfDescricao;
+    private TextArea tfDescricao;
 
     @FXML
-    private Text txtListaTarefas;
-
-
-    @FXML
-    private TextArea taResultado;
+    private Text txtQtdeTarefas;
 
     @FXML
-    private CheckBox chkOp1;
-
-    @FXML
-    private CheckBox chkOp2;
-
-    @FXML
-    private CheckBox chkOp3;
+    private ListView<Tarefa> ltvTarefas;
 
 
     @FXML
-    private ComboBox<String> cbOpcoes;
-
+    private TextArea taVerDescricao;
 
     @FXML
     private void acaoSalvar(){
@@ -50,23 +36,31 @@ public class JanelaPrincipal {
 
         agenda.adicionar(t);
 
-        txtListaTarefas.setText(agenda.lista());
-
-
+        atualizaTela();
     }
 
 
     @FXML
-    private void mostra(){
-
-        taResultado.appendText("\nOpção1"+chkOp1.isSelected());
-        taResultado.appendText("\nOpção2"+chkOp2.isSelected());
-        taResultado.appendText("\nOpção3"+chkOp3.isSelected());
-        taResultado.appendText("\n"+cbOpcoes
-                                    .getSelectionModel()
-                                    .getSelectedItem());
-
+    private void acaoClickLista(){
+        Tarefa t = ltvTarefas.getSelectionModel().getSelectedItem();
+        if(t != null){
+            taVerDescricao.setText(t.getDescricao());
+        }
     }
+
+
+    private void atualizaTela(){
+        atualizaLista();
+
+        txtQtdeTarefas.setText("Total de Tarefas:"+agenda.getLista().size());
+    }
+
+
+    private void atualizaLista(){
+        ltvTarefas.getItems().clear();
+        ltvTarefas.getItems().addAll(agenda.getLista());
+    }
+
 
 
 }
