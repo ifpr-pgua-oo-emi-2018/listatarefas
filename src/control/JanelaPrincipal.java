@@ -1,14 +1,20 @@
 package control;
 
+import javafx.application.Application;
+import javafx.application.Platform;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.control.*;
 import javafx.scene.text.Text;
 import model.Agenda;
 import model.Tarefa;
 
+import java.io.IOException;
 import java.text.DateFormat;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.Optional;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -18,11 +24,7 @@ public class JanelaPrincipal {
 
     private Agenda agenda = new Agenda();
 
-    @FXML
-    private TextField tfTitulo;
 
-    @FXML
-    private TextArea tfDescricao;
 
     @FXML
     private Text txtQtdeTarefas;
@@ -33,8 +35,6 @@ public class JanelaPrincipal {
     @FXML
     private TextArea taVerDescricao;
 
-    @FXML
-    private DatePicker dpPrazo;
 
     @FXML
     private Text txtPrazo;
@@ -42,32 +42,42 @@ public class JanelaPrincipal {
     @FXML
     private CheckBox chkConcluida;
 
-    @FXML
-    private TextField tfHora;
+
 
     @FXML
-    private void acaoSalvar(){
+    private void acaoCadastrar(){
+        Dialog<ButtonType> dialog = new Dialog<>();
 
-        String titulo = tfTitulo.getText();
-        String descricao = tfDescricao.getText();
-        String strHora = tfHora.getText();
+        try{
 
-        if(!verificaHora(strHora)){
-            mensagem("Formato de hora inválido!!");
-            return;
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(getClass().getResource("../view/cadastro.fxml"));
+            Parent content = loader.load();
+            dialog.getDialogPane().setContent(content);
+            dialog.getDialogPane().getButtonTypes().add(ButtonType.APPLY);
+            dialog.getDialogPane().getButtonTypes().add(ButtonType.CANCEL);
+
+            Optional<ButtonType> resultado = dialog.showAndWait();
+
+            if(resultado.isPresent() && resultado.get() == ButtonType.APPLY){
+                Cadastro controle = loader.getController();
+
+                Tarefa t = controle.pegaResultado();
+                if(t != null){
+                    agenda.adicionar(t);
+                    atualizaTela();
+                }
+            }
+
+
+        }catch (IOException e){
+
         }
+    }
 
-
-        String[] tokens = strHora.split(":");
-        int hora = Integer.valueOf(tokens[0]);
-        int minuto = Integer.valueOf(tokens[1]);
-
-        LocalDateTime prazo = LocalDateTime.from(dpPrazo.getValue().atTime(hora,minuto));
-        Tarefa t = new Tarefa(titulo,descricao,prazo);
-
-        agenda.adicionar(t);
-
-        atualizaTela();
+    @FXML
+    private void sair(){
+        Platform.exit();
     }
 
 
@@ -105,13 +115,7 @@ public class JanelaPrincipal {
         ltvTarefas.getItems().addAll(agenda.getLista());
     }
 
-    private boolean verificaHora(String hora){
 
-        Pattern pattern = Pattern.compile("\\d\\d:\\d\\d");
-        Matcher m = pattern.matcher(hora);
-
-        return m.find();
-    }
 
     private void mensagem(String msg){
         Alert a = new Alert(Alert.AlertType.INFORMATION,msg);
