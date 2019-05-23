@@ -9,6 +9,8 @@ import model.Tarefa;
 import java.text.DateFormat;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class JanelaPrincipal {
 
@@ -49,9 +51,12 @@ public class JanelaPrincipal {
         String titulo = tfTitulo.getText();
         String descricao = tfDescricao.getText();
         String strHora = tfHora.getText();
-        if(strHora.isEmpty()){
-            strHora = "00:00";
+
+        if(!verificaHora(strHora)){
+            mensagem("Formato de hora inválido!!");
+            return;
         }
+
 
         String[] tokens = strHora.split(":");
         int hora = Integer.valueOf(tokens[0]);
@@ -100,6 +105,18 @@ public class JanelaPrincipal {
         ltvTarefas.getItems().addAll(agenda.getLista());
     }
 
+    private boolean verificaHora(String hora){
+
+        Pattern pattern = Pattern.compile("\\d\\d:\\d\\d");
+        Matcher m = pattern.matcher(hora);
+
+        return m.find();
+    }
+
+    private void mensagem(String msg){
+        Alert a = new Alert(Alert.AlertType.INFORMATION,msg);
+        a.showAndWait();
+    }
 
 
 }
