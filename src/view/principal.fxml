@@ -13,6 +13,9 @@
 
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Text?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.CheckBox?>
 <BorderPane prefHeight="400.0"
             prefWidth="600.0"
             xmlns="http://javafx.com/javafx/8.0.161-ea"
@@ -29,7 +32,12 @@
             <TextField fx:id="tfTitulo" GridPane.columnIndex="1" GridPane.rowIndex="0" />
             <Label text="Descrição" GridPane.columnIndex="0" GridPane.rowIndex="1" />
             <TextArea fx:id="tfDescricao" prefRowCount="3" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <Button onAction="#acaoSalvar" text="Salvar" BorderPane.alignment="BOTTOM_RIGHT" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label text="Prazo" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+            <HBox spacing="3" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                <DatePicker fx:id="dpPrazo"  />
+                <TextField fx:id="tfHora" promptText="00:00" prefColumnCount="5"/>
+            </HBox>
+            <Button onAction="#acaoSalvar" text="Salvar" BorderPane.alignment="BOTTOM_RIGHT" GridPane.columnIndex="1" GridPane.rowIndex="3" />
         </GridPane>
     </top>
     <left>
@@ -40,11 +48,17 @@
         </ListView>
     </left>
     <center>
-        <TextArea fx:id="taVerDescricao">
-         <BorderPane.margin>
-            <Insets top="5.0" />
-         </BorderPane.margin>
-        </TextArea>
+        <VBox>
+            <BorderPane.margin>
+                <Insets top="5.0" />
+            </BorderPane.margin>
+            <TextArea fx:id="taVerDescricao" prefColumnCount="20"/>
+            <HBox spacing="10">
+                <Text fx:id="txtPrazo" text="Prazo:"/>
+                <CheckBox fx:id="chkConcluida" text="Concluída" disable="true" onAction="#acaoConcluida"/>
+            </HBox>
+        </VBox>
+
     </center>
     <bottom>
         <HBox>

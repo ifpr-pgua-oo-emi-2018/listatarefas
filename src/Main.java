@@ -28,7 +28,7 @@ public class Main {
                     System.out.println("Descricao:");
                     descricao = scanner.nextLine();
 
-                    Tarefa t = new Tarefa(titulo,descricao);
+                    Tarefa t = new Tarefa(titulo,descricao,null);
 
                     agenda.adicionar(t);
                     break;

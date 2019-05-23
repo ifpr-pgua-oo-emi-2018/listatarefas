@@ -43,7 +43,7 @@ public class MainJavaFx extends Application {
                 String titulo = tfTitulo.getText();
                 String descricao = tfDescricao.getText();
 
-                Tarefa tarefa = new Tarefa(titulo,descricao);
+                Tarefa tarefa = new Tarefa(titulo,descricao,null);
 
                 agenda.adicionar(tarefa);
 

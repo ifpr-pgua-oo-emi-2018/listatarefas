@@ -6,7 +6,13 @@ import javafx.scene.text.Text;
 import model.Agenda;
 import model.Tarefa;
 
+import java.text.DateFormat;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
 public class JanelaPrincipal {
+
+    private static final DateTimeFormatter df = DateTimeFormatter.ofPattern("dd/MM/yyyy hh:mm");
 
     private Agenda agenda = new Agenda();
 
@@ -22,17 +28,37 @@ public class JanelaPrincipal {
     @FXML
     private ListView<Tarefa> ltvTarefas;
 
-
     @FXML
     private TextArea taVerDescricao;
+
+    @FXML
+    private DatePicker dpPrazo;
+
+    @FXML
+    private Text txtPrazo;
+
+    @FXML
+    private CheckBox chkConcluida;
+
+    @FXML
+    private TextField tfHora;
 
     @FXML
     private void acaoSalvar(){
 
         String titulo = tfTitulo.getText();
         String descricao = tfDescricao.getText();
+        String strHora = tfHora.getText();
+        if(strHora.isEmpty()){
+            strHora = "00:00";
+        }
 
-        Tarefa t = new Tarefa(titulo,descricao);
+        String[] tokens = strHora.split(":");
+        int hora = Integer.valueOf(tokens[0]);
+        int minuto = Integer.valueOf(tokens[1]);
+
+        LocalDateTime prazo = LocalDateTime.from(dpPrazo.getValue().atTime(hora,minuto));
+        Tarefa t = new Tarefa(titulo,descricao,prazo);
 
         agenda.adicionar(t);
 
@@ -45,9 +71,22 @@ public class JanelaPrincipal {
         Tarefa t = ltvTarefas.getSelectionModel().getSelectedItem();
         if(t != null){
             taVerDescricao.setText(t.getDescricao());
+
+            chkConcluida.setSelected(t.isConcluida());
+            chkConcluida.setDisable(false);
+
+            txtPrazo.setText(df.format(t.getPrazo()));
         }
     }
 
+
+    @FXML
+    private void acaoConcluida(){
+        Tarefa t = ltvTarefas.getSelectionModel().getSelectedItem();
+        if(t!=null){
+            t.setConcluida(chkConcluida.isSelected());
+        }
+    }
 
     private void atualizaTela(){
         atualizaLista();
