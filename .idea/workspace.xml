@@ -12,11 +12,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Tarefa.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Tarefa.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/model/Tarefa.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
+            <state relative-caret-position="392">
+              <caret line="28" column="5" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
+              <folding>
+                <element signature="e#1013#1014#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -24,8 +27,8 @@
       <file leaf-file-name="JanelaPrincipal.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/control/JanelaPrincipal.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="445">
-              <caret line="46" column="51" selection-start-line="46" selection-start-column="51" selection-end-line="46" selection-end-column="51" />
+            <state relative-caret-position="672">
+              <caret line="48" column="5" selection-start-line="48" selection-start-column="5" selection-end-line="48" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -45,7 +48,7 @@
       <file leaf-file-name="MainJavaFx.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/MainJavaFx.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
+            <state relative-caret-position="462">
               <caret line="35" selection-start-line="35" selection-end-line="35" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -54,11 +57,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="principal.fxml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="principal.fxml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/view/principal.fxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="35" column="68" selection-start-line="35" selection-start-column="68" selection-end-line="35" selection-end-column="68" />
+            <state relative-caret-position="784">
+              <caret line="56" selection-start-line="56" selection-end-line="56" />
             </state>
           </provider>
           <provider editor-type-id="JavaFX-Scene-Builder" />
@@ -79,7 +82,7 @@
       <file leaf-file-name="principalBorder.fxml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/view/principalBorder.fxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="370">
+            <state relative-caret-position="812">
               <caret line="58" column="30" selection-start-line="58" selection-start-column="30" selection-end-line="58" selection-end-column="30" />
             </state>
           </provider>
@@ -97,7 +100,12 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="ComData" />
+      </map>
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -140,6 +148,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -174,8 +184,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -183,6 +191,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="full.screen.before.presentation.mode" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
@@ -262,50 +271,54 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25239000" />
+    <option name="totallyTimeSpent" value="25285000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1918" y="179" width="1604" height="907" extended-state="6" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="11" />
-      <window_info active="true" anchor="bottom" id="Messages" order="4" visible="true" weight="0.32869786" />
       <window_info anchor="right" id="Palette&#9;" order="0" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Flutter Performance" side_tool="true" />
+      <window_info anchor="bottom" id="Flutter Performance" order="12" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="2" />
       <window_info anchor="bottom" id="Database Changes" order="0" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="7" weight="0.13400759" />
-      <window_info anchor="bottom" id="Version Control" order="3" weight="0.32869786" />
+      <window_info anchor="bottom" id="Run" order="7" weight="0.37182203" />
+      <window_info anchor="bottom" id="Version Control" order="3" weight="0.3294893" />
       <window_info anchor="bottom" id="Terminal" order="1" />
-      <window_info anchor="right" id="Flutter Outline" />
+      <window_info anchor="right" id="Flutter Outline" order="4" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="3" visible="true" weight="0.12276215" />
+      <window_info content_ui="combo" id="Project" order="3" visible="true" weight="0.124040924" />
       <window_info anchor="right" id="Database" order="1" />
       <window_info id="Structure" order="4" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="5" weight="0.25" />
       <window_info id="UI Designer" order="0" />
       <window_info anchor="bottom" id="Debug" order="8" weight="0.3984375" />
       <window_info id="Favorites" order="1" side_tool="true" />
-      <window_info anchor="right" id="Flutter Inspector" />
+      <window_info anchor="right" id="Flutter Inspector" order="4" />
+      <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="6" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="4" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="11" />
+      <window_info active="true" anchor="bottom" id="Messages" order="4" visible="true" weight="0.32869786" />
+      <window_info anchor="right" id="Palette&#9;" order="0" />
       <window_info anchor="bottom" id="Message" order="5" />
+      <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="6" weight="0.3294271" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="6" weight="0.25" />
-      <window_info anchor="bottom" id="Version Control" order="3" weight="0.3294893" />
-      <window_info id="Favorites" order="1" side_tool="true" />
+      <window_info anchor="bottom" id="Database Changes" order="0" show_stripe_button="false" />
+      <window_info active="true" anchor="bottom" id="Run" order="7" visible="true" weight="0.37222221" />
+      <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
       <window_info content_ui="combo" id="Project" order="3" visible="true" weight="0.098958336" />
       <window_info id="Structure" order="4" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="4" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="5" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="11" />
-      <window_info active="true" anchor="bottom" id="Run" order="7" visible="true" weight="0.37222221" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="0" />
       <window_info anchor="bottom" id="Find" order="6" weight="0.3294271" />
@@ -314,12 +327,12 @@
       <window_info anchor="bottom" id="Terminal" order="1" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" order="3" weight="0.3294893" />
       <window_info anchor="bottom" id="Debug" order="8" weight="0.3984375" />
       <window_info anchor="bottom" id="Message" order="5" />
       <window_info anchor="bottom" id="Messages" order="4" weight="0.3295238" />
       <window_info anchor="right" id="Maven Projects" order="2" />
-      <window_info anchor="bottom" id="Database Changes" order="0" show_stripe_button="false" />
+      <window_info id="Favorites" order="1" side_tool="true" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -329,6 +342,9 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/../.." />
+    </ignored-roots>
     <MESSAGE value="initial commit" />
     <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
   </component>
@@ -553,9 +569,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="594">
           <caret line="36" column="26" selection-start-line="36" selection-start-column="26" selection-end-line="36" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -590,9 +603,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="594">
           <caret line="33" column="26" selection-start-line="33" selection-start-column="26" selection-end-line="33" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -669,9 +679,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="594">
           <caret line="36" column="26" selection-start-line="36" selection-start-column="26" selection-end-line="36" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -687,7 +694,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/view/principalBorder.fxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="370">
+        <state relative-caret-position="812">
           <caret line="58" column="30" selection-start-line="58" selection-start-column="30" selection-end-line="58" selection-end-column="30" />
         </state>
       </provider>
@@ -695,7 +702,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MainJavaFx.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
+        <state relative-caret-position="462">
           <caret line="35" selection-start-line="35" selection-end-line="35" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -715,16 +722,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/view/principal.fxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="35" column="68" selection-start-line="35" selection-start-column="68" selection-end-line="35" selection-end-column="68" />
+        <state relative-caret-position="784">
+          <caret line="56" selection-start-line="56" selection-end-line="56" />
         </state>
       </provider>
       <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/control/JanelaPrincipal.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="445">
-          <caret line="46" column="51" selection-start-line="46" selection-start-column="51" selection-end-line="46" selection-end-column="51" />
+        <state relative-caret-position="672">
+          <caret line="48" column="5" selection-start-line="48" selection-start-column="5" selection-end-line="48" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -740,8 +747,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/model/Tarefa.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
+        <state relative-caret-position="392">
+          <caret line="28" column="5" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
+          <folding>
+            <element signature="e#1013#1014#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
