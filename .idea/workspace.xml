@@ -261,6 +261,8 @@
         <item itemvalue="Application.MainFxml" />
         <item itemvalue="Application.MainJavaFx" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.MainFxml" />
+        <item itemvalue="Application.MainJavaFx" />
       </list>
     </recent_temporary>
   </component>
