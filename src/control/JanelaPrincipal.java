@@ -24,8 +24,6 @@ public class JanelaPrincipal {
 
     private Agenda agenda = new Agenda();
 
-
-
     @FXML
     private Text txtQtdeTarefas;
 
@@ -34,7 +32,6 @@ public class JanelaPrincipal {
 
     @FXML
     private TextArea taVerDescricao;
-
 
     @FXML
     private Text txtPrazo;
@@ -51,15 +48,24 @@ public class JanelaPrincipal {
         try{
 
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("../view/cadastro.fxml"));
+
+            loader.setLocation(getClass()
+                    .getResource("../view/cadastro.fxml"));
+
             Parent content = loader.load();
-            dialog.getDialogPane().setContent(content);
-            dialog.getDialogPane().getButtonTypes().add(ButtonType.APPLY);
-            dialog.getDialogPane().getButtonTypes().add(ButtonType.CANCEL);
+
+            dialog.getDialogPane()
+                    .setContent(content);
+
+            dialog.getDialogPane()
+                    .getButtonTypes().add(ButtonType.APPLY);
+            dialog.getDialogPane()
+                    .getButtonTypes().add(ButtonType.CANCEL);
 
             Optional<ButtonType> resultado = dialog.showAndWait();
 
-            if(resultado.isPresent() && resultado.get() == ButtonType.APPLY){
+            if(resultado.isPresent() &&
+                    resultado.get() == ButtonType.APPLY){
                 Cadastro controle = loader.getController();
 
                 Tarefa t = controle.pegaResultado();

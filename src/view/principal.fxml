@@ -12,18 +12,31 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
 
+<?import javafx.scene.control.SeparatorMenuItem?>
 <VBox prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.161-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.JanelaPrincipal">
 
 
 
 
         <MenuBar>
-            <Menu text="Inicio">
-                <items>
-                    <MenuItem onAction="#acaoCadastrar" text="Adicionar" />
-                    <MenuItem onAction="#sair" text="Sair" />
-                </items>
-            </Menu>
+            <menus>
+                <Menu text="Inicio">
+                    <items>
+                        <MenuItem onAction="#acaoCadastrar" text="Adicionar" />
+                        <Menu text="Outros">
+                            <items>
+                                <MenuItem text="Outro 1" />
+                                <MenuItem text="Outro 2" />
+
+                            </items>
+                        </Menu>
+
+                        <SeparatorMenuItem />
+                        <MenuItem onAction="#sair" text="Sair" />
+
+                    </items>
+                </Menu>
+            </menus>
         </MenuBar>
     <BorderPane>
         <padding>
