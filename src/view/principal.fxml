@@ -23,14 +23,6 @@
                 <Menu text="Inicio">
                     <items>
                         <MenuItem onAction="#acaoCadastrar" text="Adicionar" />
-                        <Menu text="Outros">
-                            <items>
-                                <MenuItem text="Outro 1" />
-                                <MenuItem text="Outro 2" />
-
-                            </items>
-                        </Menu>
-
                         <SeparatorMenuItem />
                         <MenuItem onAction="#sair" text="Sair" />
 
