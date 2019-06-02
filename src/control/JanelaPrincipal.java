@@ -58,14 +58,14 @@ public class JanelaPrincipal {
                     .setContent(content);
 
             dialog.getDialogPane()
-                    .getButtonTypes().add(ButtonType.APPLY);
+                    .getButtonTypes().add(ButtonType.FINISH);
             dialog.getDialogPane()
                     .getButtonTypes().add(ButtonType.CANCEL);
 
             Optional<ButtonType> resultado = dialog.showAndWait();
 
             if(resultado.isPresent() &&
-                    resultado.get() == ButtonType.APPLY){
+                    resultado.get() == ButtonType.FINISH){
                 Cadastro controle = loader.getController();
 
                 Tarefa t = controle.pegaResultado();

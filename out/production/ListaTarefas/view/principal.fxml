@@ -25,19 +25,21 @@
                         <MenuItem onAction="#acaoCadastrar" text="Adicionar" />
                         <Menu text="Outros">
                             <items>
-                                <MenuItem text="Outro 1" />
-                                <MenuItem text="Outro 2" />
+                                <MenuItem text="Sair" />
+                                <MenuItem text="Sair" />
+                                <MenuItem text="Sair" />
 
                             </items>
                         </Menu>
 
-                        <SeparatorMenuItem/>
+                        <SeparatorMenuItem />
                         <MenuItem onAction="#sair" text="Sair" />
 
                     </items>
                 </Menu>
             </menus>
         </MenuBar>
+
     <BorderPane>
         <padding>
             <Insets bottom="15" left="15" right="15" top="15" />
