@@ -1,15 +1,18 @@
-package control;
+package listatarefas.control;
 
 import javafx.fxml.FXML;
-import javafx.scene.control.*;
-import javafx.scene.text.Text;
-import model.Tarefa;
+import javafx.scene.control.DatePicker;
+import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
+import listatarefas.NavegadorJanelas;
+import listatarefas.model.Agenda;
+import listatarefas.model.Tarefa;
 
 import java.time.LocalDateTime;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class Cadastro {
+public class JanelaCadastro extends Controlador{
 
     @FXML
     private TextField tfTitulo;
@@ -23,8 +26,8 @@ public class Cadastro {
     @FXML
     private TextField tfHora;
 
-
-    public Tarefa pegaResultado(){
+    @FXML
+    private void acaoSalvar(){
 
         String titulo = tfTitulo.getText();
         String descricao = tfDescricao.getText();
@@ -32,7 +35,7 @@ public class Cadastro {
 
         if(!verificaHora(strHora)){
             mensagem("Formato de hora inválido!!");
-            return null;
+            return;
         }
 
 
@@ -43,9 +46,18 @@ public class Cadastro {
         LocalDateTime prazo = LocalDateTime.from(dpPrazo.getValue().atTime(hora,minuto));
         Tarefa t = new Tarefa(titulo,descricao,prazo);
 
-        return t;
+        Agenda.getInstance().adicionar(t);
+
+
+        NavegadorJanelas.loadJanela(NavegadorJanelas.PRINCIPAL);
 
     }
+
+    @FXML
+    private void acaoCancelar(){
+        NavegadorJanelas.loadJanela(NavegadorJanelas.PRINCIPAL);
+    }
+
 
     private boolean verificaHora(String hora){
 
@@ -53,11 +65,6 @@ public class Cadastro {
         Matcher m = pattern.matcher(hora);
 
         return m.find();
-    }
-
-    private void mensagem(String msg){
-        Alert a = new Alert(Alert.AlertType.INFORMATION,msg);
-        a.showAndWait();
     }
 
 }

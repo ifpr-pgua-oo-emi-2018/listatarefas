@@ -1,8 +1,9 @@
-package model;
+package listatarefas.model;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 
-public class Tarefa {
+public class Tarefa implements Serializable {
 
     private String titulo;
     private String descricao;

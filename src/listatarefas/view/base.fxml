@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Janela base, utilizada para receber o conteúdo das outas janelas da aplicação
+     não precisa mexer nada aqui...
+-->
+
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<StackPane fx:controller="listatarefas.control.JanelaBase"
+           xmlns:fx="http://javafx.com/fxml" alignment="center"
+           fx:id="painelBase">
+
+
+</StackPane>
